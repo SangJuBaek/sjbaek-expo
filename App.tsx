@@ -1,12 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { Button, ThemeProvider } from 'react-native-elements';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>holy shit</Text>
       <StatusBar style="auto" />
-      <Button color="#17BF63" onPress={() => {}} title="Button" />
+      <Button
+        title={'React Native Elements'}
+        icon={{
+          name: 'home',
+          type: 'font-awesome',
+          size: 15,
+          color: 'white'
+        }}
+        containerStyle={{
+          width: 200,
+          marginHorizontal: 50,
+          marginVertical: 10,
+        }}
+      />
     </View>
   );
 }
